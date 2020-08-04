@@ -15,7 +15,7 @@
 #import <Accelerate/Accelerate.h>
 #import <QuartzCore/QuartzCore.h>
 #import <MobileCoreServices/MobileCoreServices.h>
-#import <AssetsLibrary/AssetsLibrary.h>
+//#import <AssetsLibrary/AssetsLibrary.h>
 #import <objc/runtime.h>
 #import <pthread.h>
 #import <zlib.h>
@@ -2784,7 +2784,7 @@ CGImageRef YYCGImageCreateWithWebPData(CFDataRef webpData,
 - (void)setIsDecodedForDisplay:(BOOL)isDecodedForDisplay {
     objc_setAssociatedObject(self, @selector(isDecodedForDisplay), @(isDecodedForDisplay), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
-
+/*
 - (void)saveToAlbumWithCompletionBlock:(void(^)(NSURL *assetURL, NSError *error))completionBlock {
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         NSData *data = [self _imageDataRepresentationForSystem:YES];
@@ -2801,6 +2801,7 @@ CGImageRef YYCGImageCreateWithWebPData(CFDataRef webpData,
         }];
     });
 }
+*/
 
 - (NSData *)imageDataRepresentation {
     return [self _imageDataRepresentationForSystem:NO];
